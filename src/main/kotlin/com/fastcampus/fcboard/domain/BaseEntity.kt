@@ -1,4 +1,4 @@
-package com.fastcampus.fcboard.controller.domain
+package com.fastcampus.fcboard.domain
 
 import jakarta.persistence.MappedSuperclass
 import java.time.LocalDateTime
@@ -13,7 +13,7 @@ abstract class BaseEntity(
         protected set
     var updatedAt: LocalDateTime? = null
         protected set
-    fun update(updatedBy: String) {
+    fun updatedBy(updatedBy: String) {
         this.updatedBy = updatedBy
         this.updatedAt = LocalDateTime.now()
     }
